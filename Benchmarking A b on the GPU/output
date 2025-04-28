@@ -1,0 +1,83 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2023 The MathWorks, Inc.
+                  R2023a (9.14.0.2206163) 64-bit (glnxa64)
+                             February 22, 2023
+
+Warning: X does not support locale en_US.UTF-8
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Starting benchmarks with 6 different double-precision matrices of sizes
+ranging from 1024-by-1024 to 16384-by-16384.
+Creating a matrix of size 1024-by-1024.
+Gigaflops on CPU: 28.515810
+Gigaflops on GPU: 65.289475
+Creating a matrix of size 4096-by-4096.
+Gigaflops on CPU: 45.840947
+Gigaflops on GPU: 342.336333
+Creating a matrix of size 7168-by-7168.
+Gigaflops on CPU: 56.026060
+Gigaflops on GPU: 747.574958
+Creating a matrix of size 10240-by-10240.
+Gigaflops on CPU: 59.261190
+Gigaflops on GPU: 645.254907
+Creating a matrix of size 13312-by-13312.
+Gigaflops on CPU: 63.295382
+Gigaflops on GPU: 840.549981
+Creating a matrix of size 16384-by-16384.
+Gigaflops on CPU: 63.162656
+Gigaflops on GPU: 920.203501
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@gpu07>
+Subject: Job 349994: <#!/bin/bash;#BSUB -n 1;#BSUB -W 20;#BSUB -q gpu;#BSUB -R "select[a30]";#BSUB -gpu "num=1";#BSUB -o out.%J;#BSUB -e err.%J;module load matlab;matlab -nodisplay -nosplash -nodesktop -singleCompThread -r "run('matlab_gpu_benchmark.m');exit;"> in cluster <Hazel> Done
+
+Job <#!/bin/bash;#BSUB -n 1;#BSUB -W 20;#BSUB -q gpu;#BSUB -R "select[a30]";#BSUB -gpu "num=1";#BSUB -o out.%J;#BSUB -e err.%J;module load matlab;matlab -nodisplay -nosplash -nodesktop -singleCompThread -r "run('matlab_gpu_benchmark.m');exit;"> was submitted from host <login03> by user <dshah8> in cluster <Hazel> at Sun Jan  7 12:19:42 2024
+Job was executed on host(s) <gpu07>, in queue <gpu>, as user <dshah8> in cluster <Hazel> at Sun Jan  7 12:19:42 2024
+</home/dshah8> was used as the home directory.
+</share/hpc-support/dshah8/matlab> was used as the working directory.
+Started at Sun Jan  7 12:19:42 2024
+Terminated at Sun Jan  7 12:25:55 2024
+Results reported at Sun Jan  7 12:25:55 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -n 1
+#BSUB -W 20
+#BSUB -q gpu
+#BSUB -R "select[a30]"
+#BSUB -gpu "num=1"
+#BSUB -o out.%J
+#BSUB -e err.%J
+module load matlab
+matlab -nodisplay -nosplash -nodesktop -singleCompThread -r "run('matlab_gpu_benchmark.m');exit;"
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   332.02 sec.
+    Max Memory :                                 5 GB
+    Average Memory :                             3.00 GB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                76
+    Run time :                                   391 sec.
+    Turnaround time :                            373 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <err.349994> for stderr output of this job.
